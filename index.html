@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html data-n-head-ssr lang="es" data-n-head="lang">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <title>Experimentos SEO y Nuxt: ¿SSR, SPA o Static?</title>
+    <meta name="description" content="Experimento de PWA desarrollada con Nuxt.js para el evento SEOPLUS del 27 de julio de 2018. Cuál de las opciones que nos ofrece Nuxt es mejor para Google?" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link type="image/ico" href="/images/favicon.ico" rel="icon" />
+  </head>
+  <body >
+    <div>
+          <section class="container">
+            <div>
+              <a href="https://pwaexperiments.com">
+              <div class="PwaNuxtLogo">
+                <img src="images/nuxt-logo.png" alt="nuxt logo" class="nuxt-logo">
+                <img src="images/plus-icon.png" alt="plus icon" class="plus-icon">
+                <img src="images/pwa-logo.png" alt="pwa logo" class="pwa-logo">
+              </div>
+              </a>
+              <hr>
+              <h1 class="title">
+                Vamos a jugar a un juego...
+              </h1>
+              <div class="HomeContent">
+                  <h2 class="subtitle">
+                    En esta web hay creados 3 subdominios distintos
+                  </h3>
+                  <p>En cada subdominio se ha creado un proyecto con Nuxt.js junto con el módulo PWA, pero cada uno configurado de un modo distinto para generar la aplicación correspondiente.</p>
+                  <p>Aquí tenéis los enlaces a cada una de las opciones:</p>
+                  <div class="links">
+                    <a href="https://ssr.pwaexperiments.com" target="_blank" class="button--green">SSR</a>
+                    <a href="https://static.pwaexperiments.com" target="_blank" class="button--green">Static</a>
+                    <a href="https://spa.pwaexperiments.com" target="_blank" class="button--green">SPA</a>
+                  </div>
+                  <h2 class="subtitle">
+                    ¿Qué significa todo esto?
+                  </h2>
+                  <h3 class="headline">SSR (Server Side Rendered)</h3>
+                  <p>En el primer caso, utilizamos Nuxt.js como framework para renderizar la aplicación del proyecto.</p>
+                  <h3 class="headline">Static Generated</h3>
+                  <p>En este caso, Nuxt.js genera un HTML para cada una de las rutas y lo guarda en un archivo. Es decir, en este caso hace un pre rendering del proyecto.</p>
+                  <h3 class="headline">SPA (Single Pag Application)</h3>
+                  <p>Por último, Nuxt.js ofrece también la opción de generar una SPA, utilizando Nuxt.js como si trabajásemos con Vue.js.</p>
+                  <h2 class="subtitle">
+                    ¿Y todo esto para qué?
+                  </h2>
+                  <p>Pues para ver qué tal se comporta Google con cada una de las opciones. ¿Te interesan los resultados? Pues no te pierdas el <a href="http://seoplus.tv/congress-2018/" target="_blank" class="seoplus">SEOPLUS</a> del próximo 27 de julio ;) </p>
+              </div>
+              <footer>
+                <p>Made with love by <strong>Estela Franco</strong></p><nav><ul><li><a href="https://twitter.com/guaca">Twitter</a></li><li><a href="https://github.com/guaca/pwa">GitHub</a></li><li><a href="https://estelafranco.com">Blog</a></li></ul></nav>
+              </footer>
+            </div>
+          </section>
+    </div>
+    <style>
+      html {
+        position: relative;
+        min-height: 100vh;
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 16px;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      p {
+        padding: 6px;
+        margin: 0 100px;
+      }
+
+      *, *:before, *:after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      h1, h2, h3, p {
+        line-height: 1.5em;
+      }
+
+      .button--green {
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid #3b8070;
+        color: #3b8070;
+        text-decoration: none;
+        padding: 10px 30px;
+        margin: 20px 15px;
+      }
+
+      .button--green:hover {
+        color: #fff;
+        background-color: #3b8070;
+      }
+
+      .seoplus {
+        color: #526488;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      .container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-self: flex-start;
+      }
+
+      .title {
+        font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+        display: block;
+        font-weight: 500;
+        font-size: 45px;
+        color: #35495e;
+        letter-spacing: 1px;
+        margin: 10px 100px;
+      }
+
+      .subtitle {
+        font-weight: 600;
+        font-size: 30px;
+        color: #526488;
+        word-spacing: 5px;
+        margin: 20px 100px;
+      }
+
+      .headline {
+        font-weight: 800;
+        font-size: 22px;
+        color: #526488;
+        word-spacing: 5px;
+        margin: 10px 100px;
+        text-decoration: underline;
+      }
+
+      .links {
+        padding-top: 15px;
+      }
+
+      .HomeContent {
+        font-size: 22px;
+        color: #526488;
+        word-spacing: 2px;
+        padding-bottom: 15px;
+        margin: 50px 20px;
+      }
+
+      hr {
+          background-image: linear-gradient(20deg, #46B784, #5A21C5);
+          height: 5px;
+      }
+
+      footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(20deg, #46B784, #5A21C5);
+        color: white;
+        font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5em;
+        padding: 10px 30px;
+      }
+      strong {
+          font-size: 20px;
+        }
+        nav {
+            flex-grow: 1;
+        }
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          list-style-type: none;
+          padding-right: 2rem;
+        }
+        li {
+          margin: 12px;
+          font-size: 18px;
+          padding: 10px 10px;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        .PwaNuxtLogo {
+        min-height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pwa-logo, .nuxt-logo {
+        width: 180px;
+        margin: 0 20px;
+      }
+
+      .plus-icon {
+        padding-right: 10px;
+      }
+
+      @media screen and (max-width: 992px) {
+        .title {
+          font-size: 30px;
+          font-weight: 500;
+          margin: 10px 30px;
+        }
+        .subtitle {
+          font-size: 20px;
+          margin: 10px 30px;
+          font-weight: 500;
+
+        }
+
+        footer {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          padding: 12px;
+          margin-top: 2rem;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+        }
+        ul {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+        li {
+          margin: 0;
+          padding: 12px 0px;
+        }
+
+        .pwa-logo, .nuxt-logo {
+          width: 30%;
+          align-items: center;
+          flex-flow: row wrap;
+          display: flex;
+          padding: 12px;
+          margin-top: 2rem;
+          nav {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .plus-icon {
+          width: 10%;
+        }
+      }
+
+    </style>
+  </body>
+</html>
