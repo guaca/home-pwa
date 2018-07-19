@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>Experimentos SEO y Nuxt: ¿SSR, SPA o Static?</title>
     <meta name="description" content="Experimento de PWA desarrollada con Nuxt.js para el evento SEOPLUS del 27 de julio de 2018. Cuál de las opciones que nos ofrece Nuxt es mejor para Google?" />
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link type="image/ico" href="/images/favicon.ico" rel="icon" />
+    <link rel="shortcut icon" href="favicon.ico" />
   </head>
   <body >
     <div>
@@ -46,7 +45,7 @@
                   <p>En el primer caso, utilizamos Nuxt.js como framework para renderizar la aplicación del proyecto.</p>
                   <h3 class="headline">Static Generated</h3>
                   <p>En este caso, Nuxt.js genera un HTML para cada una de las rutas y lo guarda en un archivo. Es decir, en este caso hace un pre rendering del proyecto.</p>
-                  <h3 class="headline">SPA (Single Pag Application)</h3>
+                  <h3 class="headline">SPA (Single Page Application)</h3>
                   <p>Por último, Nuxt.js ofrece también la opción de generar una SPA, utilizando Nuxt.js como si trabajásemos con Vue.js.</p>
                   <h2 class="subtitle">
                     ¿Y todo esto para qué?
@@ -151,7 +150,7 @@
         color: #526488;
         word-spacing: 2px;
         padding-bottom: 25px;
-        
+
       }
 
       hr {
@@ -209,7 +208,7 @@
         padding-right: 10px;
       }
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 600px) {
         .title {
           font-size: 30px;
           font-weight: 500;
@@ -219,7 +218,9 @@
           font-size: 20px;
           margin: 10px 30px;
           font-weight: 500;
-
+        }
+        .HomeContent {
+          font-size: 18px;
         }
 
         footer {
